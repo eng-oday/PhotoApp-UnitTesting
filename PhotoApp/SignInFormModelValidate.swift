@@ -14,7 +14,7 @@ class SignInFormModelValidate {
     func IsValidFirstName (_ firstName:String)-> Bool {
         var isValid = true
         
-        if firstName == "" {
+        if firstName.count <= 2 {
             isValid = false
         }
         return isValid
