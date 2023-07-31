@@ -13,9 +13,10 @@
 		F8BA9D952A77C80200F4CB8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BA9D932A77C80200F4CB8D /* Main.storyboard */; };
 		F8BA9D972A77C80400F4CB8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8BA9D962A77C80400F4CB8D /* Assets.xcassets */; };
 		F8BA9D9A2A77C80400F4CB8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BA9D982A77C80400F4CB8D /* LaunchScreen.storyboard */; };
-		F8BA9DA52A77C80500F4CB8D /* PhotoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9DA42A77C80500F4CB8D /* PhotoAppTests.swift */; };
 		F8BA9DAF2A77C80500F4CB8D /* PhotoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9DAE2A77C80500F4CB8D /* PhotoAppUITests.swift */; };
 		F8BA9DB12A77C80500F4CB8D /* PhotoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9DB02A77C80500F4CB8D /* PhotoAppUITestsLaunchTests.swift */; };
+		F8BA9DBE2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9DBD2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift */; };
+		F8BA9DC02A77C91300F4CB8D /* SignInFormModelValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9DBF2A77C91300F4CB8D /* SignInFormModelValidate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +46,11 @@
 		F8BA9D992A77C80400F4CB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8BA9D9B2A77C80400F4CB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8BA9DA02A77C80500F4CB8D /* PhotoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8BA9DA42A77C80500F4CB8D /* PhotoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAppTests.swift; sourceTree = "<group>"; };
 		F8BA9DAA2A77C80500F4CB8D /* PhotoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BA9DAE2A77C80500F4CB8D /* PhotoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAppUITests.swift; sourceTree = "<group>"; };
 		F8BA9DB02A77C80500F4CB8D /* PhotoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8BA9DBD2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFormModelValidateTests.swift; sourceTree = "<group>"; };
+		F8BA9DBF2A77C91300F4CB8D /* SignInFormModelValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFormModelValidate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				F8BA9D962A77C80400F4CB8D /* Assets.xcassets */,
 				F8BA9D982A77C80400F4CB8D /* LaunchScreen.storyboard */,
 				F8BA9D9B2A77C80400F4CB8D /* Info.plist */,
+				F8BA9DBF2A77C91300F4CB8D /* SignInFormModelValidate.swift */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -113,7 +116,7 @@
 		F8BA9DA32A77C80500F4CB8D /* PhotoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8BA9DA42A77C80500F4CB8D /* PhotoAppTests.swift */,
+				F8BA9DBD2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift */,
 			);
 			path = PhotoAppTests;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 					};
 					F8BA9D9F2A77C80500F4CB8D = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = F8BA9D892A77C80200F4CB8D;
 					};
 					F8BA9DA92A77C80500F4CB8D = {
@@ -261,6 +265,7 @@
 				F8BA9D922A77C80200F4CB8D /* ViewController.swift in Sources */,
 				F8BA9D8E2A77C80200F4CB8D /* AppDelegate.swift in Sources */,
 				F8BA9D902A77C80200F4CB8D /* SceneDelegate.swift in Sources */,
+				F8BA9DC02A77C91300F4CB8D /* SignInFormModelValidate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8BA9DA52A77C80500F4CB8D /* PhotoAppTests.swift in Sources */,
+				F8BA9DBE2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,15 +496,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M8S29G9Z3W;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = SwiftUi.oday.PhotoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotoApp";
@@ -511,11 +523,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M8S29G9Z3W;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = SwiftUi.oday.PhotoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

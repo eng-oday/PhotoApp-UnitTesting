@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "AFDF69F8-5ADD-46F7-9902-5FF5CB0D1B77"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.IDETestFailureBreakpoint">
+         <BreakpointContent
+            uuid = "5707D67B-CE83-41E5-A267-DCA7860C517C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
