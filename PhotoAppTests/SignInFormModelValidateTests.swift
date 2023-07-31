@@ -47,5 +47,23 @@ final class SignInFormModelValidateTests: XCTestCase {
         
         XCTAssertFalse(isShortFirstName,"the IsValidFirstName() should return false if first name is too long and greater than (\(SignUpConstants.firstNameMaxLength) char but it return true ")
     }
+    
+    func testSignInFormModelTests_PasswordIsValid_ShouldReturnTrue(){
+        //Arrange
+        //Act
+        let isValidPassword = sut.isValidPassword(password: "odayMohammed")
+        // Assert
+        XCTAssertTrue(isValidPassword,"the isValidPassword() should return true if password i passed is greater than (\(SignUpConstants.minPasswordLength)) char but it return false ")
+        
+    }
+    
+    func testSignInFormModelTests_PasswordIsUnValid_ShouldReturnFalse(){
+        //Arrange
+        //Act
+        let isValidPassword = sut.isValidPassword(password: "oday")
+        // Assert
+        XCTAssertFalse(isValidPassword,"the isValidPassword() should return false if password i passed is less than (\(SignUpConstants.minPasswordLength)) char but it return true ")
+        
+    }
 
 }

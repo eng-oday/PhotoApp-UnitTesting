@@ -20,4 +20,12 @@ class SignInFormModelValidate {
         return isValid
     }
     
+    func isValidPassword(password:String)-> Bool {
+        var isValid = true
+        
+        if password.count < SignUpConstants.minPasswordLength {
+            isValid = false
+        }
+        return isValid
+    }
 }
