@@ -7,19 +7,21 @@
 
 import XCTest
 @testable import PhotoApp
+
 final class SignInFormModelValidateTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var sut: SignInFormModelValidate!
+    
+    override func setUp() {
+        sut = SignInFormModelValidate()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        sut = nil
     }
 
     func testSignInFormModelValidateTests_FirsNameIsValid_ShouldReturnTrue(){
         //Arrange
-        let sut = SignInFormModelValidate()
         // Act
         
         let isFirstNameValid = sut.IsValidFirstName("oday")
@@ -29,8 +31,6 @@ final class SignInFormModelValidateTests: XCTestCase {
     
     func testSignInFormModelValidateTests_FirstNameIsVeryShort_ShouldReturnFalse(){
         //Arrange
-        
-        let sut = SignInFormModelValidate()
         //Act
         
         let isFirstNameVeryShort = sut.IsValidFirstName("mo")
