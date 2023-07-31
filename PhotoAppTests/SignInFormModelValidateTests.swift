@@ -57,13 +57,40 @@ final class SignInFormModelValidateTests: XCTestCase {
         
     }
     
-    func testSignInFormModelTests_PasswordIsUnValid_ShouldReturnFalse(){
+    func testSignInFormModelTests_PasswordIsTooShort_ShouldReturnFalse(){
         //Arrange
         //Act
         let isValidPassword = sut.isValidPassword(password: "oday")
         // Assert
         XCTAssertFalse(isValidPassword,"the isValidPassword() should return false if password i passed is less than (\(SignUpConstants.minPasswordLength)) char but it return true ")
         
+    }
+    
+    func testSignInFormModelTests_lastNameIsValid_ShouldReturnTrue(){
+        //Arrange
+        
+        //Act
+        let isValidLastName = sut.isValidLastNme(lastName: "oday")
+        //Assert
+        XCTAssertTrue(isValidLastName, "the isValidLastNme() should return true if last name is valid  but it return false ")
+    }
+    
+    func testSignInFormModelTests_lastNameIstooShort_ShouldReturnFalse(){
+        //Arrange
+        
+        //Act
+        let isValidLastName = sut.isValidLastNme(lastName: "od")
+        //ASsert
+        XCTAssertFalse(isValidLastName, "the isValidLastNme() should return false if password i passed is less than (\(SignUpConstants.minPasswordLength)) char but it return true ")
+    }
+    
+    func testSignInFormModelTests_lastNameIstooLong_ShouldReturnFalse(){
+        //Arrange
+        
+        //Act
+        let isValidLastName = sut.isValidLastNme(lastName: "odymojdhjdshjnfjshfjhsfnbfsjbsafgjhgfjhagshfbsnbhsfghgfddbfdkfhjkd")
+        //ASsert
+        XCTAssertFalse(isValidLastName, "the isValidLastNme() should return false if password i passed is less than (\(SignUpConstants.firstNameMaxLength)) char but it return true ")
     }
 
 }
