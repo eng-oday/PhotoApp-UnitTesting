@@ -17,6 +17,7 @@
 		F8BA9DB12A77C80500F4CB8D /* PhotoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9DB02A77C80500F4CB8D /* PhotoAppUITestsLaunchTests.swift */; };
 		F8BA9DBE2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9DBD2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift */; };
 		F8BA9DC02A77C91300F4CB8D /* SignInFormModelValidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9DBF2A77C91300F4CB8D /* SignInFormModelValidate.swift */; };
+		F8BA9DC22A77E70E00F4CB8D /* SignUpConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9DC12A77E70E00F4CB8D /* SignUpConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F8BA9DB02A77C80500F4CB8D /* PhotoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8BA9DBD2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFormModelValidateTests.swift; sourceTree = "<group>"; };
 		F8BA9DBF2A77C91300F4CB8D /* SignInFormModelValidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFormModelValidate.swift; sourceTree = "<group>"; };
+		F8BA9DC12A77E70E00F4CB8D /* SignUpConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				F8BA9D982A77C80400F4CB8D /* LaunchScreen.storyboard */,
 				F8BA9D9B2A77C80400F4CB8D /* Info.plist */,
 				F8BA9DBF2A77C91300F4CB8D /* SignInFormModelValidate.swift */,
+				F8BA9DC12A77E70E00F4CB8D /* SignUpConstants.swift */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				F8BA9D8E2A77C80200F4CB8D /* AppDelegate.swift in Sources */,
 				F8BA9D902A77C80200F4CB8D /* SceneDelegate.swift in Sources */,
 				F8BA9DC02A77C91300F4CB8D /* SignInFormModelValidate.swift in Sources */,
+				F8BA9DC22A77E70E00F4CB8D /* SignUpConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@ class SignInFormModelValidate {
     func IsValidFirstName (_ firstName:String)-> Bool {
         var isValid = true
         
-        if firstName.count <= 2 {
+        if firstName.count <= SignUpConstants.firstNameMinLength || firstName.count > SignUpConstants.firstNameMaxLength{
             isValid = false
         }
         return isValid
