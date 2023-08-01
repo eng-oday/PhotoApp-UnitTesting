@@ -10,17 +10,17 @@ import XCTest
 
 final class SignInFormModelValidateTests: XCTestCase {
 
-    var sut: SignInFormModelValidate!
+    var sut: SignUpFormModelValidate!
     
     override func setUp() {
-        sut = SignInFormModelValidate()
+        sut = SignUpFormModelValidate()
     }
 
     override func tearDown() {
         sut = nil
     }
 
-    func testSignInFormModelValidateTests_FirsNameIsValid_ShouldReturnTrue(){
+    func testSignUpFormModelValidateTests_FirsNameIsValid_ShouldReturnTrue(){
         //Arrange
         // Act
         
@@ -29,7 +29,7 @@ final class SignInFormModelValidateTests: XCTestCase {
         XCTAssertTrue(isFirstNameValid,"the IsValidFirstName() should return true if first name is valid but it's return false")
     }
     
-    func testSignInFormModelValidateTests_FirstNameIsVeryShort_ShouldReturnFalse(){
+    func testSignUpFormModelValidateTests_FirstNameIsVeryShort_ShouldReturnFalse(){
         //Arrange
         //Act
         
@@ -39,7 +39,7 @@ final class SignInFormModelValidateTests: XCTestCase {
         XCTAssertFalse(isFirstNameVeryShort,"the IsValidFirstName() should return false if first name is less than (\(SignUpConstants.firstNameMinLength) char but it return true ")
     }
     
-    func testSignInFormModelTests_FirstNameIsTooLong_ShouldReturnFalse(){
+    func testSignUpFormModelTests_FirstNameIsTooLong_ShouldReturnFalse(){
         //Arrange
         
         //Act
@@ -48,7 +48,7 @@ final class SignInFormModelValidateTests: XCTestCase {
         XCTAssertFalse(isShortFirstName,"the IsValidFirstName() should return false if first name is too long and greater than (\(SignUpConstants.firstNameMaxLength) char but it return true ")
     }
     
-    func testSignInFormModelTests_PasswordIsValid_ShouldReturnTrue(){
+    func testSignUpFormModelTests_PasswordIsValid_ShouldReturnTrue(){
         //Arrange
         //Act
         let isValidPassword = sut.isValidPassword(password: "odayMohammed")
@@ -57,7 +57,7 @@ final class SignInFormModelValidateTests: XCTestCase {
         
     }
     
-    func testSignInFormModelTests_PasswordIsTooShort_ShouldReturnFalse(){
+    func testSignUpFormModelTests_PasswordIsTooShort_ShouldReturnFalse(){
         //Arrange
         //Act
         let isValidPassword = sut.isValidPassword(password: "oday")
@@ -66,7 +66,7 @@ final class SignInFormModelValidateTests: XCTestCase {
         
     }
     
-    func testSignInFormModelTests_lastNameIsValid_ShouldReturnTrue(){
+    func testSignUpFormModelTests_lastNameIsValid_ShouldReturnTrue(){
         //Arrange
         
         //Act
@@ -75,7 +75,7 @@ final class SignInFormModelValidateTests: XCTestCase {
         XCTAssertTrue(isValidLastName, "the isValidLastNme() should return true if last name is valid  but it return false ")
     }
     
-    func testSignInFormModelTests_lastNameIstooShort_ShouldReturnFalse(){
+    func testSignUpFormModelTests_lastNameIstooShort_ShouldReturnFalse(){
         //Arrange
         
         //Act
@@ -84,7 +84,7 @@ final class SignInFormModelValidateTests: XCTestCase {
         XCTAssertFalse(isValidLastName, "the isValidLastNme() should return false if password i passed is less than (\(SignUpConstants.minPasswordLength)) char but it return true ")
     }
     
-    func testSignInFormModelTests_lastNameIstooLong_ShouldReturnFalse(){
+    func testSignUpFormModelTests_lastNameIstooLong_ShouldReturnFalse(){
         //Arrange
         
         //Act
@@ -93,7 +93,7 @@ final class SignInFormModelValidateTests: XCTestCase {
         XCTAssertFalse(isValidLastName, "the isValidLastNme() should return false if password i passed is less than (\(SignUpConstants.firstNameMaxLength)) char but it return true ")
     }
     
-    func testSignInFormModelTests_passwordIsMatched_ShouldReturnTrue() {
+    func testSignUpFormModelTests_passwordIsMatched_ShouldReturnTrue() {
         
         //Arrange
         
@@ -106,7 +106,7 @@ final class SignInFormModelValidateTests: XCTestCase {
         
     }
     
-    func testSignInFormModelTests_passwordIsNotMatched_ShouldReturnFalse() {
+    func testSignUpFormModelTests_passwordIsNotMatched_ShouldReturnFalse() {
         
         //Arrange
         

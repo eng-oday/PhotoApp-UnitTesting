@@ -8,7 +8,7 @@
 import Foundation
 
 
-class SignInFormModelValidate {
+class SignUpFormModelValidate {
     
     
     func IsValidFirstName (_ firstName:String)-> Bool {
