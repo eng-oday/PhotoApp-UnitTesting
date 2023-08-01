@@ -10,4 +10,5 @@ import Foundation
 
 struct SignUpResponseModel:Codable {
     
+    var Status:String
 }
