@@ -24,7 +24,7 @@ final class SignUpWebServiceTests: XCTestCase {
             // MARK:  Arrange
         
         // 1. CREATE SYSTEM UNDER TEST
-        let sut = SignUpWebService()
+        let sut = SignUpWebService(urlString:"https://bit.ly/signup-mock-service-users")
         
         // 2. CREATE OBJECT FROM REQUEST MODEL WITH FAKE DATA
         let signUpFormRequestModel = SignUpFormRequestModel(firstName:"oday",lastName:"mohammed",email:"oday@gmail.com",password:"123456")
