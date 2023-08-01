@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8BA89A72A79237C0016F718 /* SignUpWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA89A62A79237C0016F718 /* SignUpWebServiceTests.swift */; };
+		F8BA89A92A7924EC0016F718 /* SignUpWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA89A82A7924EC0016F718 /* SignUpWebService.swift */; };
+		F8BA89AB2A7927E70016F718 /* SignUpFormRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA89AA2A7927E70016F718 /* SignUpFormRequestModel.swift */; };
+		F8BA89AD2A792A560016F718 /* SignUpResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA89AC2A792A560016F718 /* SignUpResponseModel.swift */; };
+		F8BA89AF2A792A6E0016F718 /* SignUpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA89AE2A792A6E0016F718 /* SignUpError.swift */; };
 		F8BA9D8E2A77C80200F4CB8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9D8D2A77C80200F4CB8D /* AppDelegate.swift */; };
 		F8BA9D902A77C80200F4CB8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9D8F2A77C80200F4CB8D /* SceneDelegate.swift */; };
 		F8BA9D922A77C80200F4CB8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA9D912A77C80200F4CB8D /* ViewController.swift */; };
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F8BA89A62A79237C0016F718 /* SignUpWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWebServiceTests.swift; sourceTree = "<group>"; };
+		F8BA89A82A7924EC0016F718 /* SignUpWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWebService.swift; sourceTree = "<group>"; };
+		F8BA89AA2A7927E70016F718 /* SignUpFormRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormRequestModel.swift; sourceTree = "<group>"; };
+		F8BA89AC2A792A560016F718 /* SignUpResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseModel.swift; sourceTree = "<group>"; };
+		F8BA89AE2A792A6E0016F718 /* SignUpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpError.swift; sourceTree = "<group>"; };
 		F8BA9D8A2A77C80200F4CB8D /* PhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BA9D8D2A77C80200F4CB8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8BA9D8F2A77C80200F4CB8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +122,10 @@
 				F8BA9D9B2A77C80400F4CB8D /* Info.plist */,
 				F8BA9DBF2A77C91300F4CB8D /* SignUpFormModelValidate.swift */,
 				F8BA9DC12A77E70E00F4CB8D /* SignUpConstants.swift */,
+				F8BA89A82A7924EC0016F718 /* SignUpWebService.swift */,
+				F8BA89AA2A7927E70016F718 /* SignUpFormRequestModel.swift */,
+				F8BA89AC2A792A560016F718 /* SignUpResponseModel.swift */,
+				F8BA89AE2A792A6E0016F718 /* SignUpError.swift */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -120,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				F8BA9DBD2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift */,
+				F8BA89A62A79237C0016F718 /* SignUpWebServiceTests.swift */,
 			);
 			path = PhotoAppTests;
 			sourceTree = "<group>";
@@ -265,7 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8BA89A92A7924EC0016F718 /* SignUpWebService.swift in Sources */,
 				F8BA9D922A77C80200F4CB8D /* ViewController.swift in Sources */,
+				F8BA89AF2A792A6E0016F718 /* SignUpError.swift in Sources */,
+				F8BA89AD2A792A560016F718 /* SignUpResponseModel.swift in Sources */,
+				F8BA89AB2A7927E70016F718 /* SignUpFormRequestModel.swift in Sources */,
 				F8BA9D8E2A77C80200F4CB8D /* AppDelegate.swift in Sources */,
 				F8BA9D902A77C80200F4CB8D /* SceneDelegate.swift in Sources */,
 				F8BA9DC02A77C91300F4CB8D /* SignUpFormModelValidate.swift in Sources */,
@@ -277,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8BA89A72A79237C0016F718 /* SignUpWebServiceTests.swift in Sources */,
 				F8BA9DBE2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
