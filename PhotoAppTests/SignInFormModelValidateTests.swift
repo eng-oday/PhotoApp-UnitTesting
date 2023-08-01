@@ -92,5 +92,18 @@ final class SignInFormModelValidateTests: XCTestCase {
         //ASsert
         XCTAssertFalse(isValidLastName, "the isValidLastNme() should return false if password i passed is less than (\(SignUpConstants.firstNameMaxLength)) char but it return true ")
     }
+    
+    func testSignInFormModelTests_passwordIsMatched_ShouldReturnTrue() {
+        
+        //Arrange
+        
+        //Act
+        let IsMatched = sut.IsPasswordMatched(password:"123456",Repeated:"123456")
+        
+        //Assert
+        
+        XCTAssertTrue(IsMatched, "the IsPasswordMatched() should return true if password match but it return false ")
+        
+    }
 
 }
