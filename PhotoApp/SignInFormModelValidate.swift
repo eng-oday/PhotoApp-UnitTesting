@@ -41,10 +41,6 @@ class SignInFormModelValidate {
     }
     
     func IsPasswordMatched(password:String,Repeated:String) -> Bool {
-        var isValid = true
-        if password != Repeated {
-            isValid = false
-        }
-        return isValid
+        return password == Repeated
     }
 }

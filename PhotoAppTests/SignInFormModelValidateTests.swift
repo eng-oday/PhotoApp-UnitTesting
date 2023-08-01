@@ -105,5 +105,18 @@ final class SignInFormModelValidateTests: XCTestCase {
         XCTAssertTrue(IsMatched, "the IsPasswordMatched() should return true if password match but it return false ")
         
     }
+    
+    func testSignInFormModelTests_passwordIsNotMatched_ShouldReturnFalse() {
+        
+        //Arrange
+        
+        //Act
+        let IsMatched = sut.IsPasswordMatched(password:"123456",Repeated:"1234")
+        
+        //Assert
+        
+        XCTAssertFalse(IsMatched, "the IsPasswordMatched() should return false if password not match but it return true ")
+        
+    }
 
 }
