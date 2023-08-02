@@ -11,7 +11,7 @@ import Foundation
 
 class MockUrlProtocol:URLProtocol {
     
-    static var stubResponseData:Data?
+    static var stubResponseData:Data? // STUB RESPONSE DATA WHAT I WILL INJECT
     
     override class func canInit(with request: URLRequest) -> Bool {
         return true

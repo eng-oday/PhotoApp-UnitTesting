@@ -22,9 +22,14 @@ final class SignUpWebServiceTests: XCTestCase {
     func testSignUpWebService_WhenGivenSuccesfullyResponse_ShouldReturnSuccess(){
         
             // MARK:  Arrange
+        let config = URLSessionConfiguration.ephemeral                          // 1.  CREATE CONFIG WITHOUT ANY PERSISTANCE STORAGE (CASHE- COOKIE - CREDENTIALS) AND THAT WHAT EPHEMERAL MEAN
+        config.protocolClasses              = [MockUrlProtocol.self]            // 1.1 ADD OUR MOCK PROTOCOL
+        let jsonString                      = "{\"status\":\"ok\"}"             // 1.2 WRITE THE RESPONSE MODEL WE WAIT FROM SUCCESS CASE
+        MockUrlProtocol.stubResponseData    =  jsonString.data(using: .utf8)    // 1.3 CONVERT JSON STRING TO DATA TYPE AND INJECT IT TO MOCK URL PROTOCOL
+        let urlSession = URLSession(configuration: config)                      // 2.  CREATE URL SESSION WITH OUR CUSTOM CONFIG
         
         // 1. CREATE SYSTEM UNDER TEST
-        let sut = SignUpWebService(urlString:"https://tlyqhtlbn8.execute-api.us-east-1.amazonaws.com/prod/signup-mock-service/users")
+        let sut = SignUpWebService(urlString:SignUpConstants.signUpUrlString ,urlSession: urlSession)
         
         // 2. CREATE OBJECT FROM REQUEST MODEL WITH FAKE DATA
         let signUpFormRequestModel = SignUpFormRequestModel(firstName:"oday",lastName:"mohammed",email:"oday@gmail.com",password:"123456")
