@@ -24,7 +24,7 @@ final class SignUpWebServiceTests: XCTestCase {
             // MARK:  Arrange
         
         // 1. CREATE SYSTEM UNDER TEST
-        let sut = SignUpWebService(urlString:"https://bit.ly/signup-mock-service-users")
+        let sut = SignUpWebService(urlString:"https://tlyqhtlbn8.execute-api.us-east-1.amazonaws.com/prod/signup-mock-service/users")
         
         // 2. CREATE OBJECT FROM REQUEST MODEL WITH FAKE DATA
         let signUpFormRequestModel = SignUpFormRequestModel(firstName:"oday",lastName:"mohammed",email:"oday@gmail.com",password:"123456")
@@ -39,7 +39,7 @@ final class SignUpWebServiceTests: XCTestCase {
             
             // MARK:  Assert
             // 4. CHECK IF THE RESPONSE STATUS IS BECOME SUCCESFULLY
-            XCTAssertEqual(SignUpResponseModel?.Status, "Ok")
+            XCTAssertEqual(SignUpResponseModel?.status, "ok")
             expectaion.fulfill()
             
         }
