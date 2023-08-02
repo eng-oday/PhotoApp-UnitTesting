@@ -8,6 +8,7 @@
 import Foundation
 
 
-struct SignUpError:Codable {
+enum SignUpError:Error {
     
+    case ResponseModelParsingError
 }

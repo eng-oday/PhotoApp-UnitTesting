@@ -41,7 +41,7 @@ class SignUpWebService {
                 print(responseModel)
                 return completionHandler(responseModel, nil)
             }else {
-                //TODO :  WRITE UNIT TEST TO HANDLE  AN ERROR HERE
+                completionHandler(nil,SignUpError.ResponseModelParsingError)
             }
         }
         dataTask.resume()
