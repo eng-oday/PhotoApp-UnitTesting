@@ -22,7 +22,8 @@ class SignUpWebService {
         
         // 1. SEETUP URL
         guard let url = URL(string: urlString) else {
-            // TODO : make unit test to test that specific error message is returned is url is nil
+            
+            completionHandler(nil,SignUpError.invalidUrlRequestString)
             return
         }
         // 2. PREPARE URL REQUEST

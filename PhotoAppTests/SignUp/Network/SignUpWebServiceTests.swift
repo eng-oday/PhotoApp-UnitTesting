@@ -67,11 +67,28 @@ final class SignUpWebServiceTests: XCTestCase {
         XCTAssertNil(SignUpResponseModel , "SignUp() must send Response as nil when i got Different Json Response but i got a value")
         XCTAssertEqual(error, SignUpError.ResponseModelParsingError , "the signUp() method did not return expcted error")
         expectaion.fulfill()
-        
     }
     
     self.wait(for: [expectaion], timeout: 5)
         
+    }
+    
+    
+    func testSignUpWebService_WhenEmptyRequestUrlProvided_ShouldReturnError(){
+        //Arrange
+        sut = SignUpWebService(urlString: "")
+        let expectaion  = self.expectation(description: "An Empty Url Request Expectaion")
+        
+        //Act
+        sut.SignUp(withForm: signUpFormRequestModel) { signUpResponse, error in
+            
+            //Assert
+            XCTAssertEqual(error, SignUpError.invalidUrlRequestString," expect from SignUp() return error invalid url but she don't and return a different one")
+            XCTAssertNil(signUpResponse,"expext from SignUp() to get nil response but i got a result")
+            expectaion.fulfill()
+        }
+        
+        self.wait(for: [expectaion], timeout: 2)
     }
     
     
