@@ -4,4 +4,6 @@
  
 - 🚮 Unit Testing 
 - 🔌 TDD
-- 💡 Test Api With Mock Data
+- 💡 Test Code Isolation Using (Fake , Mock , Stub ,Dummy) Data
+- 📩 Apply Dependency Injection
+- 🔑 Practise on Test Apis With Stub Data
