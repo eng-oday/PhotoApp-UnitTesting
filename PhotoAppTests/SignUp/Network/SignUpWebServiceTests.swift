@@ -65,7 +65,7 @@ final class SignUpWebServiceTests: XCTestCase {
 
         // MARK: ASSERT
         XCTAssertNil(SignUpResponseModel , "SignUp() must send Response as nil when i got Different Json Response but i got a value")
-        XCTAssertEqual(error, SignUpError.ResponseModelParsingError , "the signUp() method did not return expcted error")
+        XCTAssertEqual(error, SignUpError.invalidResponseModel , "the signUp() method did not return expcted error")
         expectaion.fulfill()
     }
     

@@ -42,7 +42,7 @@ class SignUpWebService {
                 print(responseModel)
                 return completionHandler(responseModel, nil)
             }else {
-                completionHandler(nil,SignUpError.ResponseModelParsingError)
+                completionHandler(nil,SignUpError.invalidResponseModel)
             }
         }
         dataTask.resume()
