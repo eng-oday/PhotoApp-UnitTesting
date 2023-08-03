@@ -92,4 +92,23 @@ final class SignUpWebServiceTests: XCTestCase {
     }
     
     
+    func testSignUpWebService_WhenRequestFail_shouldReturnErrorMessageDescription(){
+        
+        //Arrange
+        let expectation         = self.expectation(description: "excpect return localized error message because reauest is failed")
+        let errorDescription    = "Localized Description Of An Error"
+        MockUrlProtocol.error   = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: errorDescription])
+        
+        // Act
+        sut.SignUp(withForm: signUpFormRequestModel) { responseModel, error in
+            //Assert
+            XCTAssertEqual(error, SignUpError.failedRequest(description:errorDescription),"excpect from SignUp() return failedRequest error message because request is failed but it return different error")
+            expectation.fulfill()
+        }
+        
+       
+        self.wait(for: [expectation], timeout: 2)
+        
+    }
+    
 }

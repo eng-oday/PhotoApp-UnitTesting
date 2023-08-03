@@ -22,7 +22,6 @@ class SignUpWebService {
         
         // 1. SEETUP URL
         guard let url = URL(string: urlString) else {
-            
             completionHandler(nil,SignUpError.invalidUrlRequestString)
             return
         }
@@ -36,7 +35,11 @@ class SignUpWebService {
         // 3. CREATE DATA TASK
         let dataTask        =  urlSession.dataTask(with: urlRequest) { data, response, error in
             
-            // TODO : WRITE UNIT TEST TO HANDLE ERROR
+            
+            if let error = error {
+                return completionHandler(nil,SignUpError.failedRequest(description: error.localizedDescription))
+                
+            }
             
             if let data = data , let responseModel = try? JSONDecoder().decode(SignUpResponseModel.self, from: data){
                 print(responseModel)
