@@ -7,8 +7,12 @@
 
 import Foundation
 
-
-class MockSignUpWebService {
+@testable import PhotoApp
+class MockSignUpWebService:SignUpWebServiceProtocol {
     
     var isSignUpMethodCalled:Bool = false
+    
+    func SignUp(withForm SignUpModel: SignUpFormRequestModel, completionHandler: @escaping (SignUpResponseModel?, SignUpError?) -> Void) {
+        isSignUpMethodCalled =  true
+    }
 }

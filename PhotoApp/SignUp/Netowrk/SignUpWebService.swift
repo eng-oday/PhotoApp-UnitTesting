@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SignUpWebService {
+class SignUpWebService:SignUpWebServiceProtocol {
     
     private var urlSession:URLSession
     private var urlString:String
