@@ -10,7 +10,10 @@ import Foundation
 @testable import PhotoApp
 class MockSignUpModelValidator:SignUpModelValidatorProtocol {
     
-    var isFirstNameValidate:Bool = false
+    var isFirstNameValidate:Bool        = false
+    var isValidPassword:Bool            = false
+    var isValidLastNme:Bool             = false
+    var IsPasswordMatched:Bool          = false
     
     func IsValidFirstName(_ firstName: String) -> Bool {
         isFirstNameValidate = true
@@ -18,14 +21,17 @@ class MockSignUpModelValidator:SignUpModelValidatorProtocol {
     }
     
     func isValidPassword(password: String) -> Bool {
-        return true
+        isValidPassword = true
+        return isValidPassword
     }
     
     func isValidLastNme(lastName: String) -> Bool {
-        return true
+        isValidLastNme = true
+        return isValidLastNme
     }
     
     func IsPasswordMatched(password: String, Repeated: String) -> Bool {
-        return true
+        IsPasswordMatched = true
+        return IsPasswordMatched
     }    
 }
