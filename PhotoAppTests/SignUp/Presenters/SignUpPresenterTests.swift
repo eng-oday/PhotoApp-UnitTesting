@@ -24,7 +24,8 @@ final class SignUpPresenterTests: XCTestCase {
         //ARRANGE
         let signUpFormModel = SignUpFormModel(firstName:"oday" , lastName:"Mohammed" ,email:"oday.mo@gmail.com",password:"123456" , repeatPassword:"123456")
         let mockSignUpModelValidator = MockSignUpModelValidator()
-        let sut = SignUpPresenter(signUpFormValidator:mockSignUpModelValidator)
+        let mockSignUpWebService    = MockSignUpWebService()
+        let sut = SignUpPresenter(signUpFormValidator:mockSignUpModelValidator,SignUpWebService:mockSignUpWebService)
         //ACT
         
         sut.processUserSignUp(formModel:signUpFormModel)
@@ -43,7 +44,7 @@ final class SignUpPresenterTests: XCTestCase {
         let signUpFormModel = SignUpFormModel(firstName:"oday" , lastName:"Mohammed" ,email:"oday.mo@gmail.com",password:"123456" , repeatPassword:"123456")
         let mockSignUpModelValidator = MockSignUpModelValidator()
         let mockSignUpWebService    = MockSignUpWebService()
-        let sut = SignUpPresenter(signUpFormValidator:mockSignUpModelValidator)
+        let sut = SignUpPresenter(signUpFormValidator:mockSignUpModelValidator,SignUpWebService:mockSignUpWebService)
         //ACT
         sut.processUserSignUp(formModel:signUpFormModel)
         //ASSERT

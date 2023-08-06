@@ -11,9 +11,11 @@ import Foundation
 class SignUpPresenter {
     
     var signUpFormValidator:SignUpModelValidatorProtocol
+    var signUpWebService:SignUpWebServiceProtocol
     
-    init(signUpFormValidator: SignUpModelValidatorProtocol) {
+    init(signUpFormValidator: SignUpModelValidatorProtocol , SignUpWebService:SignUpWebServiceProtocol) {
         self.signUpFormValidator = signUpFormValidator
+        self.signUpWebService = SignUpWebService
     }
     
     func processUserSignUp(formModel:SignUpFormModel) {
@@ -29,5 +31,11 @@ class SignUpPresenter {
         if !signUpFormValidator.isValidPassword(password: formModel.password){
             return
         }
+        let signUpFormModel = SignUpFormRequestModel(firstName: "", lastName: "", email: "", password: "")
+        
+        signUpWebService.SignUp(withForm: signUpFormModel) { response, error in
+            // TODO
+        }
     }
+    
 }
