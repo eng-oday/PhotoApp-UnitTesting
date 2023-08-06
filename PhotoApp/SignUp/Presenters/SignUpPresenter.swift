@@ -12,10 +12,12 @@ class SignUpPresenter {
     
     var signUpFormValidator:SignUpModelValidatorProtocol
     var signUpWebService:SignUpWebServiceProtocol
+    var delegate:SignUpViewDelegateProtocol
     
-    init(signUpFormValidator: SignUpModelValidatorProtocol , SignUpWebService:SignUpWebServiceProtocol) {
-        self.signUpFormValidator = signUpFormValidator
-        self.signUpWebService = SignUpWebService
+    init(signUpFormValidator: SignUpModelValidatorProtocol , SignUpWebService:SignUpWebServiceProtocol,SignUpviewDelegate:SignUpViewDelegateProtocol) {
+        self.signUpFormValidator    = signUpFormValidator
+        self.signUpWebService       = SignUpWebService
+        self.delegate               = SignUpviewDelegate
     }
     
     func processUserSignUp(formModel:SignUpFormModel) {
@@ -35,6 +37,9 @@ class SignUpPresenter {
         
         signUpWebService.SignUp(withForm: signUpFormModel) { response, error in
              // TODO
+            if let _ = response {
+                self.delegate.successfullySignUp()
+            }
         }
     }
     
