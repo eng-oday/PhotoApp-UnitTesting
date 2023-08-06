@@ -11,11 +11,17 @@ import Foundation
 class MockSignUpWebService:SignUpWebServiceProtocol {
     
     var isSignUpMethodCalled:Bool = false
+    var testFailure:Bool = false
     
     func SignUp(withForm SignUpModel: SignUpFormRequestModel, completionHandler: @escaping (SignUpResponseModel?, SignUpError?) -> Void) {
         isSignUpMethodCalled =  true
         
-        let response = SignUpResponseModel(status: "OK")
-        completionHandler(response , nil)
+        if testFailure {
+            completionHandler(nil , SignUpError.invalidResponseModel)
+        }else {
+            let response = SignUpResponseModel(status: "OK")
+            completionHandler(response , nil)
+        }
+
     }
 }
