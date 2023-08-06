@@ -102,22 +102,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F8318E872A7F870500A35C92 /* Presenter */ = {
+		F8318E872A7F870500A35C92 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
 				F8318E882A7F871900A35C92 /* SignUpPresenter.swift */,
 			);
-			path = Presenter;
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		F8318E8E2A7F985000A35C92 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F8318E8C2A7F905000A35C92 /* SignUpModelValidatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F8318E8F2A7F985C00A35C92 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				F8318E832A7F83C800A35C92 /* SignUpPresenterTests.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		F8318E902A7F986D00A35C92 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F89EB84A2A7A7A5500237AB8 /* MockURLProtocol.swift */,
+				F8318E8A2A7F88F700A35C92 /* MockSignUpModelValidator.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		F8BA89B02A792C440016F718 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				F8318E872A7F870500A35C92 /* Presenter */,
+				F8318E8E2A7F985000A35C92 /* Protocols */,
+				F8318E872A7F870500A35C92 /* Presenters */,
 				F8BA89B32A792C580016F718 /* Netowrk */,
 				F8BA89B22A792C510016F718 /* ViewController */,
 				F8BA89B12A792C4B0016F718 /* Model */,
-				F8318E8C2A7F905000A35C92 /* SignUpModelValidatorProtocol.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -154,11 +179,10 @@
 		F8BA89B42A792C7F0016F718 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				F8318E902A7F986D00A35C92 /* Mocks */,
+				F8318E8F2A7F985C00A35C92 /* Presenters */,
 				F8BA89B62A792C8D0016F718 /* Model */,
 				F8BA89B52A792C850016F718 /* Network */,
-				F89EB84A2A7A7A5500237AB8 /* MockURLProtocol.swift */,
-				F8318E832A7F83C800A35C92 /* SignUpPresenterTests.swift */,
-				F8318E8A2A7F88F700A35C92 /* MockSignUpModelValidator.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
