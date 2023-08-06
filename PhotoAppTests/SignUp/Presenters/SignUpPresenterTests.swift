@@ -8,24 +8,30 @@
 import XCTest
 @testable import PhotoApp
 final class SignUpPresenterTests: XCTestCase {
-
+    var sut:SignUpPresenter!
+    var signUpFormModel:SignUpFormModel!
+    var mockSignUpModelValidator:MockSignUpModelValidator!
+    var mockSignUpWebService:MockSignUpWebService!
 
     override func setUp() {
-        
+         signUpFormModel            = SignUpFormModel(firstName:"oday" , lastName:"Mohammed" ,email:"oday.mo@gmail.com",password:"123456" , repeatPassword:"123456")
+         mockSignUpModelValidator   = MockSignUpModelValidator()
+         mockSignUpWebService       = MockSignUpWebService()
+         sut                        = SignUpPresenter(signUpFormValidator:mockSignUpModelValidator,SignUpWebService:mockSignUpWebService)
     }
     
     override func tearDown() {
-        
+        signUpFormModel            = nil
+        mockSignUpModelValidator   = nil
+        mockSignUpWebService       = nil
+        sut                        = nil
     }
     
     
     func testSignUpPresenter_WhenInformationProvided_WillValidateEachProperty(){
         
         //ARRANGE
-        let signUpFormModel = SignUpFormModel(firstName:"oday" , lastName:"Mohammed" ,email:"oday.mo@gmail.com",password:"123456" , repeatPassword:"123456")
-        let mockSignUpModelValidator = MockSignUpModelValidator()
-        let mockSignUpWebService    = MockSignUpWebService()
-        let sut = SignUpPresenter(signUpFormValidator:mockSignUpModelValidator,SignUpWebService:mockSignUpWebService)
+
         //ACT
         
         sut.processUserSignUp(formModel:signUpFormModel)
@@ -41,10 +47,7 @@ final class SignUpPresenterTests: XCTestCase {
     func testSignUpPresenter_WhenGivenValidFormModel_ShouldCallSignUpMethod(){
         
         //ARRANGE
-        let signUpFormModel = SignUpFormModel(firstName:"oday" , lastName:"Mohammed" ,email:"oday.mo@gmail.com",password:"123456" , repeatPassword:"123456")
-        let mockSignUpModelValidator = MockSignUpModelValidator()
-        let mockSignUpWebService    = MockSignUpWebService()
-        let sut = SignUpPresenter(signUpFormValidator:mockSignUpModelValidator,SignUpWebService:mockSignUpWebService)
+
         //ACT
         sut.processUserSignUp(formModel:signUpFormModel)
         //ASSERT
