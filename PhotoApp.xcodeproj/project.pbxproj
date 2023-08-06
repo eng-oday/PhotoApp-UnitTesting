@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F8318E842A7F83C800A35C92 /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8318E832A7F83C800A35C92 /* SignUpPresenterTests.swift */; };
 		F8318E862A7F84DF00A35C92 /* SignUpFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8318E852A7F84DF00A35C92 /* SignUpFormModel.swift */; };
+		F8318E892A7F871900A35C92 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8318E882A7F871900A35C92 /* SignUpPresenter.swift */; };
+		F8318E8B2A7F88F700A35C92 /* MockSignUpModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8318E8A2A7F88F700A35C92 /* MockSignUpModelValidator.swift */; };
 		F89EB84B2A7A7A5500237AB8 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89EB84A2A7A7A5500237AB8 /* MockURLProtocol.swift */; };
 		F8BA89A72A79237C0016F718 /* SignUpWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA89A62A79237C0016F718 /* SignUpWebServiceTests.swift */; };
 		F8BA89A92A7924EC0016F718 /* SignUpWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA89A82A7924EC0016F718 /* SignUpWebService.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		F8318E832A7F83C800A35C92 /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
 		F8318E852A7F84DF00A35C92 /* SignUpFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormModel.swift; sourceTree = "<group>"; };
+		F8318E882A7F871900A35C92 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		F8318E8A2A7F88F700A35C92 /* MockSignUpModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSignUpModelValidator.swift; sourceTree = "<group>"; };
 		F89EB84A2A7A7A5500237AB8 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		F8BA89A62A79237C0016F718 /* SignUpWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWebServiceTests.swift; sourceTree = "<group>"; };
 		F8BA89A82A7924EC0016F718 /* SignUpWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWebService.swift; sourceTree = "<group>"; };
@@ -96,9 +100,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8318E872A7F870500A35C92 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F8318E882A7F871900A35C92 /* SignUpPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		F8BA89B02A792C440016F718 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				F8318E872A7F870500A35C92 /* Presenter */,
 				F8BA89B32A792C580016F718 /* Netowrk */,
 				F8BA89B22A792C510016F718 /* ViewController */,
 				F8BA89B12A792C4B0016F718 /* Model */,
@@ -142,6 +155,7 @@
 				F8BA89B52A792C850016F718 /* Network */,
 				F89EB84A2A7A7A5500237AB8 /* MockURLProtocol.swift */,
 				F8318E832A7F83C800A35C92 /* SignUpPresenterTests.swift */,
+				F8318E8A2A7F88F700A35C92 /* MockSignUpModelValidator.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -354,6 +368,7 @@
 				F8BA9D8E2A77C80200F4CB8D /* AppDelegate.swift in Sources */,
 				F8BA9D902A77C80200F4CB8D /* SceneDelegate.swift in Sources */,
 				F8BA9DC02A77C91300F4CB8D /* SignUpFormModelValidate.swift in Sources */,
+				F8318E892A7F871900A35C92 /* SignUpPresenter.swift in Sources */,
 				F8BA9DC22A77E70E00F4CB8D /* SignUpConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F89EB84B2A7A7A5500237AB8 /* MockURLProtocol.swift in Sources */,
+				F8318E8B2A7F88F700A35C92 /* MockSignUpModelValidator.swift in Sources */,
 				F8BA89A72A79237C0016F718 /* SignUpWebServiceTests.swift in Sources */,
 				F8318E842A7F83C800A35C92 /* SignUpPresenterTests.swift in Sources */,
 				F8BA9DBE2A77C8D000F4CB8D /* SignInFormModelValidateTests.swift in Sources */,
