@@ -71,7 +71,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="c0e-IO-oFK" id="UQm-R1-HkV"/>
+                        <outlet property="emailTextField" destination="c0e-IO-oFK" id="sBC-lc-ENQ"/>
                         <outlet property="firstNameTextField" destination="KLl-Lt-jdX" id="Fy0-9W-0uh"/>
                         <outlet property="lastNameTextField" destination="nX4-5l-IGh" id="0js-L5-28R"/>
                         <outlet property="passwordTextField" destination="NaV-Du-l6x" id="KcA-nb-bDp"/>
