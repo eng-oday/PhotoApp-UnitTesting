@@ -4,6 +4,7 @@
  
 - 🚮 Unit Testing 
 - 🔌 TDD
-- 💡 Test Code Isolation Using (Fake , Mock , Stub ,Dummy) Data
+- 💡 Code Isolation From Dependncies Using (Fake , Mock , Stub ,Dummy) Data
 - 📩 Apply Dependency Injection
 - 🔑 Practise on Test Apis With Stub Data
+- 🕷️ Practise on Test View Controller Elements 
