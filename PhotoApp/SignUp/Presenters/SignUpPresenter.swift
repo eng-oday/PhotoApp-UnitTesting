@@ -8,13 +8,13 @@
 import Foundation
 
 
-class SignUpPresenter {
+class SignUpPresenter:SignUpPresenterProtocol {
     
     var signUpFormValidator:SignUpModelValidatorProtocol
     var signUpWebService:SignUpWebServiceProtocol
     var delegate:SignUpViewDelegateProtocol
     
-    init(signUpFormValidator: SignUpModelValidatorProtocol , SignUpWebService:SignUpWebServiceProtocol,SignUpviewDelegate:SignUpViewDelegateProtocol) {
+    required init(signUpFormValidator: SignUpModelValidatorProtocol , SignUpWebService:SignUpWebServiceProtocol,SignUpviewDelegate:SignUpViewDelegateProtocol) {
         self.signUpFormValidator    = signUpFormValidator
         self.signUpWebService       = SignUpWebService
         self.delegate               = SignUpviewDelegate

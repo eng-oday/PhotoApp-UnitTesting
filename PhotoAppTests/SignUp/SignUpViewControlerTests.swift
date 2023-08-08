@@ -58,5 +58,18 @@ final class SignUpViewControlerTests: XCTestCase {
         //HERE WE CHECK ABOUT SPECIFIC ACTION BY USE HIS NAME AND CHECK IT ON THE ARRAY OF BUTTON ACTIONS
         XCTAssertEqual(SignUpButtonAction.first , "SignUpButtonTapped:" , "signUp Button does not have any action called with SignUpButtonTapped assined to it .")
     }
+    
+    func testSignUpViewController_WhenSignUpButtonTapped_InvokeSignUpProcess(){
+         //Arrange
+        let mockUpSignUpPresenter = MockSignUpPresenter()
+        
+        //Act
+        sut.signUpButton.sendActions(for: .touchUpInside)
+        
+        //Assert
+        
+        XCTAssertTrue(mockUpSignUpPresenter.ProcessSignUpCalled)
+        
+    }
 
 }
