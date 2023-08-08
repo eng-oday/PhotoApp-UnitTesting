@@ -61,13 +61,29 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OX6-fA-TZW">
+                                <rect key="frame" x="8" y="491" width="377" height="35"/>
+                                <color key="backgroundColor" red="0.37254901959999998" green="0.35294117650000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="49v-Oj-vsT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SignUp"/>
+                                <connections>
+                                    <action selector="SignUpButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vR8-TM-sJ0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="OX6-fA-TZW" firstAttribute="top" secondItem="1eh-HE-Zod" secondAttribute="bottom" constant="80" id="Abf-DM-smp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1eh-HE-Zod" secondAttribute="trailing" constant="16" id="Mf3-xO-TZj"/>
                             <constraint firstItem="1eh-HE-Zod" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Nad-I6-XAL"/>
                             <constraint firstItem="1eh-HE-Zod" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Wea-mD-3Db"/>
+                            <constraint firstItem="OX6-fA-TZW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ZeZ-Yr-4iI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OX6-fA-TZW" secondAttribute="trailing" constant="8" id="tKX-r0-LOT"/>
                         </constraints>
                     </view>
                     <connections>
@@ -76,6 +92,7 @@
                         <outlet property="lastNameTextField" destination="nX4-5l-IGh" id="0js-L5-28R"/>
                         <outlet property="passwordTextField" destination="NaV-Du-l6x" id="KcA-nb-bDp"/>
                         <outlet property="repeatPasswordTextField" destination="JoU-5r-LC6" id="3qd-1N-UWX"/>
+                        <outlet property="signUpButton" destination="OX6-fA-TZW" id="HHu-s7-vrn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

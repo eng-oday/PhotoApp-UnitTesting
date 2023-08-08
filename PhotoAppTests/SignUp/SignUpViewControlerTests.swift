@@ -45,5 +45,18 @@ final class SignUpViewControlerTests: XCTestCase {
         XCTAssertEqual(passwordTextField.text, "" , "the password text field was not when the view cotroller initially loaded ")
         XCTAssertEqual(RepeatPasswordTextField.text, "" , "the repeat passsword text field was not when the view cotroller initially loaded ")
     }
+    
+    func testSignUpViewController_WhenCretaed_HasSignUpButtonAndAction() throws {
+        
+        let SignUpButton:UIButton   = try XCTUnwrap(sut.signUpButton ,"the SignUpButton outlet not connected to your vc ")
+        
+        let SignUpButtonAction      = try XCTUnwrap(SignUpButton.actions(forTarget: sut, forControlEvent: .touchUpInside) , "signUp Button does not have any action assigned to it ")
+        
+        XCTAssertEqual(SignUpButtonAction.count, 1 ) // HERE WE CHECK FOR COUNT OF ACCTIONS ON ACTION ARRAY
+        
+        
+        //HERE WE CHECK ABOUT SPECIFIC ACTION BY USE HIS NAME AND CHECK IT ON THE ARRAY OF BUTTON ACTIONS
+        XCTAssertEqual(SignUpButtonAction.first , "SignUpButtonTapped:" , "signUp Button does not have any action called with SignUpButtonTapped assined to it .")
+    }
 
 }
